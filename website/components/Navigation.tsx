@@ -42,7 +42,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center space-x-1 group">
+          <Link href={`/${locale}`} className="flex items-center space-x-1 group -ml-12">
             <div className="relative w-60 h-60 md:w-72 md:h-72 filter drop-shadow-lg">
               <Image
                 src="/images/logo.png"
@@ -53,7 +53,7 @@ export default function Navigation() {
                 priority
               />
             </div>
-            <span className="text-3xl md:text-4xl font-bold gold-gradient-text group-hover:scale-105 transition-transform duration-300 -ml-8">
+            <span className="text-3xl md:text-4xl font-bold gold-gradient-text group-hover:scale-105 transition-transform duration-300">
               GoldenCell
             </span>
           </Link>
