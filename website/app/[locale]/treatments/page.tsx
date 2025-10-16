@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function TreatmentsPage() {
   const t = useTranslations();
@@ -106,9 +107,9 @@ export default function TreatmentsPage() {
                     ))}
                   </ul>
 
-                  <button className="bg-gradient-to-r from-[var(--gold-light)] to-[var(--gold-primary)] text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-shadow duration-200 self-start">
+                  <Link href="/contact" className="inline-block bg-gradient-to-r from-[var(--gold-light)] to-[var(--gold-primary)] text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-shadow duration-200">
                     Learn More
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -161,9 +162,9 @@ export default function TreatmentsPage() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Schedule a consultation to discover which treatment is right for you.
           </p>
-          <button className="bg-white text-[var(--gold-dark)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-200">
+          <Link href="/contact" className="inline-block bg-white text-[var(--gold-dark)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-200">
             Book Consultation
-          </button>
+          </Link>
         </motion.div>
       </div>
     </main>

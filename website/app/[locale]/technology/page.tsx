@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function TechnologyPage() {
   const t = useTranslations();
@@ -132,9 +133,9 @@ export default function TechnologyPage() {
           <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
             Learn more about how our cutting-edge exosome technology can benefit your health and wellness journey.
           </p>
-          <button className="bg-gradient-to-r from-[var(--gold-light)] to-[var(--gold-primary)] text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-shadow duration-200">
+          <Link href="/contact" className="inline-block bg-gradient-to-r from-[var(--gold-light)] to-[var(--gold-primary)] text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-shadow duration-200">
             Contact Our Team
-          </button>
+          </Link>
         </motion.div>
       </div>
     </main>

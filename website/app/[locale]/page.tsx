@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import VideoHero from '@/components/VideoHero';
 import VideoSlideshow from '@/components/VideoSlideshow';
 import TechnologySection from '@/components/TechnologySection';
@@ -73,9 +74,9 @@ export default function Home() {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Discover the power of exosome therapy and unlock your body's potential for healing and regeneration.
             </p>
-            <button className="bg-white text-[var(--gold-dark)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-200">
+            <Link href="/contact" className="inline-block bg-white text-[var(--gold-dark)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-200">
               {t('contact.cta')}
-            </button>
+            </Link>
           </motion.div>
         </div>
       </section>

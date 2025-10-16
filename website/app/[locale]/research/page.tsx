@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function ResearchPage() {
   const t = useTranslations();
@@ -206,9 +207,9 @@ export default function ResearchPage() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Interested in collaborating or learning more about our research initiatives?
           </p>
-          <button className="bg-white text-[var(--gold-dark)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-200">
+          <Link href="/contact" className="inline-block bg-white text-[var(--gold-dark)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-200">
             Get In Touch
-          </button>
+          </Link>
         </motion.div>
       </div>
     </main>

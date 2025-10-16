@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 
 export default function VideoHero() {
   const t = useTranslations('hero');
@@ -65,9 +66,9 @@ export default function VideoHero() {
           <p className="text-xl md:text-2xl text-white mb-8">
             {t('subtitle')}
           </p>
-          <button className="bg-gradient-to-r from-[var(--gold-light)] to-[var(--gold-primary)] text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-200">
+          <Link href="/about" className="inline-block bg-gradient-to-r from-[var(--gold-light)] to-[var(--gold-primary)] text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-200">
             {t('cta')}
-          </button>
+          </Link>
         </motion.div>
       </div>
 

@@ -29,8 +29,10 @@ export default function Navigation() {
   ];
 
   const switchLocale = (newLocale: string) => {
-    const currentPath = pathname.replace(`/${locale}`, '');
-    return `/${newLocale}${currentPath}`;
+    // Remove locale prefix from current path
+    const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}(\/|$)/, '/');
+    const cleanPath = pathWithoutLocale === '/' ? '' : pathWithoutLocale;
+    return `/${newLocale}${cleanPath}`;
   };
 
   return (
