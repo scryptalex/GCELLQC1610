@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 const videos = [
-  '/videos/19700121_1158_68ebe177fe0481919ef9e77be027ab9d (1).mp4',
+  '/videos/20251016_0313_01k7n5rr56e39b3m2zha5c78h9.mp4',
+  '/videos/20251016_0319_01k7n5rr56e39b3m2zha5c78h9.mp4',
+  '/videos/20251016_0309_01k7n5h1pgev8tq5e3qsged4gb.mp4',
   '/videos/20251013_1559_01k7esy1jberct4n3r0wk9qjbc.mp4',
   '/videos/20251013_1559_01k7etbxf5e8dtz89v7jw3em4w.mp4',
-  '/videos/20251016_0309_01k7n5h1pgev8tq5e3qsged4gb.mp4',
-  '/videos/20251016_0313_01k7n5rr56e39b3m2zha5c78h9.mp4',
 ];
 
 export default function VideoSlideshow() {

@@ -57,15 +57,19 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.key}
-                href={item.href === '/' ? `/${locale}` : `/${locale}${item.href}`}
-                className="text-gray-700 hover:text-[var(--gold-primary)] transition-colors duration-200 font-medium"
-              >
-                {t(item.key as any)}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const href = item.href === '/' ? `/${locale}` : `/${locale}${item.href}`;
+              return (
+                <Link
+                  key={item.key}
+                  href={href}
+                  className="text-gray-700 hover:text-[var(--gold-primary)] transition-colors duration-200 font-medium"
+                  prefetch={true}
+                >
+                  {t(item.key as any)}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Language Switcher */}
@@ -120,16 +124,20 @@ export default function Navigation() {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="px-4 py-4 space-y-3">
-            {navItems.map((item) => (
-              <Link
-                key={item.key}
-                href={item.href === '/' ? `/${locale}` : `/${locale}${item.href}`}
-                className="block text-gray-700 hover:text-[var(--gold-primary)] py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {t(item.key as any)}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const href = item.href === '/' ? `/${locale}` : `/${locale}${item.href}`;
+              return (
+                <Link
+                  key={item.key}
+                  href={href}
+                  className="block text-gray-700 hover:text-[var(--gold-primary)] py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                  prefetch={true}
+                >
+                  {t(item.key as any)}
+                </Link>
+              );
+            })}
             <div className="flex space-x-2 pt-4 border-t">
               {languages.map((lang) => (
                 <Link
