@@ -9,6 +9,7 @@
     "technology": "Technology",
     "treatments": "Treatments",
     "research": "Research",
+    "team": "Team",
     "gallery": "Gallery",
     "contact": "Contact"
   },
@@ -173,5 +174,33 @@
     "title": "Contact Us",
     "subtitle": "Get in Touch",
     "cta": "Send Message"
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Meet the Experts Behind GoldenCell",
+    "member1": {
+      "name": "Chun Hun Lee, MD",
+      "position": "Chief Medical Officer & Co-Founder",
+      "bio": "Leading expert in regenerative medicine with over 15 years of experience in exosome therapy and stem cell research.",
+      "expertise": "Regenerative Medicine, Exosome Therapy"
+    },
+    "member2": {
+      "name": "Dr. Chulgi Min",
+      "position": "Chief Scientific Officer",
+      "bio": "Pioneer in exosome isolation technology with numerous publications in top-tier scientific journals.",
+      "expertise": "Biotechnology, Molecular Biology"
+    },
+    "member3": {
+      "name": "Alexander Shulyak",
+      "position": "Chief Technology Officer",
+      "bio": "Technology innovator specializing in therapeutic delivery systems and quality control protocols.",
+      "expertise": "Bioengineering, Quality Assurance"
+    },
+    "member4": {
+      "name": "Dr. Pavel Grushin",
+      "position": "Director of Research",
+      "bio": "Research leader driving clinical studies and advancing exosome characterization methodologies.",
+      "expertise": "Clinical Research, Data Science"
+    }
   }
 }

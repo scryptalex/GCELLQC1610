@@ -19,6 +19,7 @@ export default function Navigation() {
     { key: 'technology', href: '/technology' },
     { key: 'treatments', href: '/treatments' },
     { key: 'research', href: '/research' },
+    { key: 'team', href: '/team' },
     { key: 'gallery', href: '/gallery' },
     { key: 'contact', href: '/contact' },
   ];
