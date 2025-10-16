@@ -43,12 +43,13 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center space-x-4 group">
-            <div className="relative w-20 h-20 md:w-24 md:h-24 filter drop-shadow-lg">
+            <div className="relative w-60 h-60 md:w-72 md:h-72 filter drop-shadow-lg">
               <Image
                 src="/images/logo.png"
                 alt="GoldenCell Logo"
                 fill
                 className="object-contain group-hover:scale-110 transition-transform duration-300"
+                style={{ filter: 'brightness(1.2) saturate(1.5) hue-rotate(-10deg)' }}
                 priority
               />
             </div>
