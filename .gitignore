@@ -33,6 +33,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Large files (use external storage)
-BLOOMCELL.pdf
+# Large files (videos and PDFs - store separately or use Git LFS)
+*.mp4
+*.pdf
  
