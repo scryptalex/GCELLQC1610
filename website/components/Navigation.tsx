@@ -36,19 +36,19 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[var(--platinum)]/95 backdrop-blur-sm shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center space-x-3">
-            <div className="relative w-16 h-16">
+          <Link href={`/${locale}`} className="flex items-center space-x-4 group">
+            <div className="relative w-20 h-20 md:w-24 md:h-24 filter drop-shadow-lg">
               <Image
                 src="/images/logo.png"
                 alt="GoldenCell Logo"
                 fill
-                className="object-contain"
+                className="object-contain group-hover:scale-110 transition-transform duration-300"
                 priority
               />
             </div>
-            <span className="text-2xl font-bold gold-gradient-text">
+            <span className="text-3xl md:text-4xl font-bold gold-gradient-text group-hover:scale-105 transition-transform duration-300">
               GoldenCell
             </span>
           </Link>
