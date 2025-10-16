@@ -1,42 +1,26 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function TechnologyPage() {
   const t = useTranslations();
+  const locale = useLocale();
+  const router = useRouter();
 
   const technologies = [
     {
-      title: 'Advanced Exosome Isolation',
-      description: 'Our proprietary isolation technology ensures the highest quality exosomes with maximum therapeutic potential.',
-      features: [
-        'Ultracentrifugation techniques',
-        'Size-exclusion chromatography',
-        'Immunoaffinity capture',
-        'Quality control at every step'
-      ]
+      key: 'tech1',
+      features: ['feature1', 'feature2', 'feature3', 'feature4']
     },
     {
-      title: 'Characterization & Analysis',
-      description: 'Comprehensive analysis ensures exosome purity, potency, and safety.',
-      features: [
-        'Nanoparticle tracking analysis',
-        'Electron microscopy',
-        'Western blot analysis',
-        'RNA/protein profiling'
-      ]
+      key: 'tech2',
+      features: ['feature1', 'feature2', 'feature3', 'feature4']
     },
     {
-      title: 'Therapeutic Applications',
-      description: 'Targeted delivery systems for various regenerative medicine applications.',
-      features: [
-        'Anti-aging treatments',
-        'Tissue regeneration',
-        'Immune modulation',
-        'Wound healing'
-      ]
+      key: 'tech3',
+      features: ['feature1', 'feature2', 'feature3', 'feature4']
     }
   ];
 
@@ -76,9 +60,9 @@ export default function TechnologyPage() {
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
             <div className="max-w-2xl px-8 md:px-12 text-white">
-              <h2 className="text-4xl font-bold mb-4">Revolutionary Science</h2>
+              <h2 className="text-4xl font-bold mb-4">{t('technology.videoSection.title')}</h2>
               <p className="text-xl">
-                Harnessing the power of naturally occurring cellular messengers to promote healing and regeneration.
+                {t('technology.videoSection.description')}
               </p>
             </div>
           </div>
@@ -88,7 +72,7 @@ export default function TechnologyPage() {
         <div className="space-y-12 mb-16">
           {technologies.map((tech, index) => (
             <motion.div
-              key={tech.title}
+              key={tech.key}
               initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -97,15 +81,15 @@ export default function TechnologyPage() {
             >
               <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${index % 2 === 0 ? '' : 'md:flex-row-reverse'}`}>
                 <div className={`p-8 md:p-12 ${index % 2 === 0 ? 'order-1' : 'order-2'}`}>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">{tech.title}</h3>
-                  <p className="text-lg text-gray-600 mb-6">{tech.description}</p>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4">{t(`technology.${tech.key}.title`)}</h3>
+                  <p className="text-lg text-gray-600 mb-6">{t(`technology.${tech.key}.description`)}</p>
                   <ul className="space-y-3">
                     {tech.features.map((feature) => (
                       <li key={feature} className="flex items-center">
                         <svg className="w-6 h-6 text-[var(--gold-primary)] mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
-                        <span className="text-gray-700">{feature}</span>
+                        <span className="text-gray-700">{t(`technology.${tech.key}.${feature}`)}</span>
                       </li>
                     ))}
                   </ul>
@@ -129,13 +113,16 @@ export default function TechnologyPage() {
           viewport={{ once: true }}
           className="bg-[var(--platinum-light)] rounded-2xl p-8 md:p-12 text-center"
         >
-          <h2 className="text-3xl font-bold mb-4">Interested in Our Technology?</h2>
+          <h2 className="text-3xl font-bold mb-4">{t('technology.cta.title')}</h2>
           <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
-            Learn more about how our cutting-edge exosome technology can benefit your health and wellness journey.
+            {t('technology.cta.description')}
           </p>
-          <Link href="/contact" className="inline-block bg-gradient-to-r from-[var(--gold-light)] to-[var(--gold-primary)] text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-shadow duration-200">
-            Contact Our Team
-          </Link>
+          <button
+            onClick={() => router.push(`/${locale}/contact`)}
+            className="inline-block bg-gradient-to-r from-[var(--gold-light)] to-[var(--gold-primary)] text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transition-shadow duration-200 cursor-pointer"
+          >
+            {t('technology.cta.button')}
+          </button>
         </motion.div>
       </div>
     </main>

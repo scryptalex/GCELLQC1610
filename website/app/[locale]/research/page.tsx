@@ -1,46 +1,24 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function ResearchPage() {
   const t = useTranslations();
+  const locale = useLocale();
+  const router = useRouter();
 
   const publications = [
-    {
-      year: '2024',
-      title: 'Advanced Exosome Characterization in Regenerative Medicine',
-      journal: 'Journal of Cellular Therapy',
-      authors: 'GoldenCell Research Team'
-    },
-    {
-      year: '2024',
-      title: 'Clinical Applications of Exosome-Based Therapies',
-      journal: 'International Journal of Regenerative Medicine',
-      authors: 'GoldenCell Scientific Advisory Board'
-    },
-    {
-      year: '2023',
-      title: 'Safety and Efficacy of Exosome Treatments',
-      journal: 'Medical Research Quarterly',
-      authors: 'GoldenCell Clinical Research Division'
-    }
+    { key: 'pub1' },
+    { key: 'pub2' },
+    { key: 'pub3' }
   ];
 
   const partnerships = [
-    {
-      name: 'Leading University Medical Center',
-      focus: 'Clinical trials and research'
-    },
-    {
-      name: 'International Research Institute',
-      focus: 'Exosome characterization studies'
-    },
-    {
-      name: 'Biotech Innovation Lab',
-      focus: 'Technology development'
-    }
+    { key: 'partner1' },
+    { key: 'partner2' },
+    { key: 'partner3' }
   ];
 
   return (
@@ -79,8 +57,8 @@ export default function ResearchPage() {
           </video>
           <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
             <div className="text-center text-white px-4">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Advancing Science</h2>
-              <p className="text-xl">Pioneering research in exosome therapy and regenerative medicine</p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('research.videoSection.title')}</h2>
+              <p className="text-xl">{t('research.videoSection.description')}</p>
             </div>
           </div>
         </motion.div>
@@ -93,27 +71,24 @@ export default function ResearchPage() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-4xl font-bold text-center mb-12">Our Research Focus</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">{t('research.focus.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 icon: '🔬',
-                title: 'Basic Science',
-                description: 'Understanding exosome biology and mechanisms of action'
+                key: 'basic'
               },
               {
                 icon: '🧪',
-                title: 'Clinical Research',
-                description: 'Safety and efficacy studies in human applications'
+                key: 'clinical'
               },
               {
                 icon: '💊',
-                title: 'Therapeutic Development',
-                description: 'Creating next-generation exosome-based treatments'
+                key: 'therapeutic'
               }
             ].map((area, index) => (
               <motion.div
-                key={area.title}
+                key={area.key}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -121,8 +96,8 @@ export default function ResearchPage() {
                 className="bg-[var(--platinum-light)] rounded-xl p-8 text-center hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="text-6xl mb-4">{area.icon}</div>
-                <h3 className="text-2xl font-bold mb-3">{area.title}</h3>
-                <p className="text-gray-600">{area.description}</p>
+                <h3 className="text-2xl font-bold mb-3">{t(`research.focus.${area.key}.title`)}</h3>
+                <p className="text-gray-600">{t(`research.focus.${area.key}.description`)}</p>
               </motion.div>
             ))}
           </div>
@@ -136,11 +111,11 @@ export default function ResearchPage() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-4xl font-bold text-center mb-12">Recent Publications</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">{t('research.publications.title')}</h2>
           <div className="space-y-6">
             {publications.map((pub, index) => (
               <motion.div
-                key={pub.title}
+                key={pub.key}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -150,13 +125,13 @@ export default function ResearchPage() {
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-20 text-center">
                     <div className="inline-block px-3 py-1 bg-[var(--gold-primary)] text-white rounded-full text-sm font-bold">
-                      {pub.year}
+                      {t(`research.publications.${pub.key}.year`)}
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{pub.title}</h3>
-                    <p className="text-gray-600 mb-1">{pub.journal}</p>
-                    <p className="text-gray-500 text-sm">{pub.authors}</p>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{t(`research.publications.${pub.key}.title`)}</h3>
+                    <p className="text-gray-600 mb-1">{t(`research.publications.${pub.key}.journal`)}</p>
+                    <p className="text-gray-500 text-sm">{t(`research.publications.${pub.key}.authors`)}</p>
                   </div>
                 </div>
               </motion.div>
@@ -172,11 +147,11 @@ export default function ResearchPage() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-4xl font-bold text-center mb-12">Research Partnerships</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">{t('research.partnerships.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {partnerships.map((partner, index) => (
               <motion.div
-                key={partner.name}
+                key={partner.key}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -188,8 +163,8 @@ export default function ResearchPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-2">{partner.name}</h3>
-                <p className="text-gray-600">{partner.focus}</p>
+                <h3 className="text-xl font-bold mb-2">{t(`research.partnerships.${partner.key}.name`)}</h3>
+                <p className="text-gray-600">{t(`research.partnerships.${partner.key}.focus`)}</p>
               </motion.div>
             ))}
           </div>
@@ -203,13 +178,16 @@ export default function ResearchPage() {
           viewport={{ once: true }}
           className="bg-gradient-to-r from-[var(--gold-light)] to-[var(--gold-primary)] rounded-2xl p-8 md:p-12 text-center text-white"
         >
-          <h2 className="text-4xl font-bold mb-4">Join Our Research Community</h2>
+          <h2 className="text-4xl font-bold mb-4">{t('research.cta.title')}</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Interested in collaborating or learning more about our research initiatives?
+            {t('research.cta.description')}
           </p>
-          <Link href="/contact" className="inline-block bg-white text-[var(--gold-dark)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-200">
-            Get In Touch
-          </Link>
+          <button
+            onClick={() => router.push(`/${locale}/contact`)}
+            className="inline-block bg-white text-[var(--gold-dark)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer"
+          >
+            {t('research.cta.button')}
+          </button>
         </motion.div>
       </div>
     </main>

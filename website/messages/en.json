@@ -37,15 +37,137 @@
     "point3": {
       "title": "Personalized Treatment",
       "description": "Tailored therapy plans designed for optimal results"
+    },
+    "videoSection": {
+      "title": "Revolutionary Science",
+      "description": "Harnessing the power of naturally occurring cellular messengers to promote healing and regeneration."
+    },
+    "tech1": {
+      "title": "Advanced Exosome Isolation",
+      "description": "Our proprietary isolation technology ensures the highest quality exosomes with maximum therapeutic potential.",
+      "feature1": "Ultracentrifugation techniques",
+      "feature2": "Size-exclusion chromatography",
+      "feature3": "Immunoaffinity capture",
+      "feature4": "Quality control at every step"
+    },
+    "tech2": {
+      "title": "Characterization & Analysis",
+      "description": "Comprehensive analysis ensures exosome purity, potency, and safety.",
+      "feature1": "Nanoparticle tracking analysis",
+      "feature2": "Electron microscopy",
+      "feature3": "Western blot analysis",
+      "feature4": "RNA/protein profiling"
+    },
+    "tech3": {
+      "title": "Therapeutic Applications",
+      "description": "Targeted delivery systems for various regenerative medicine applications.",
+      "feature1": "Anti-aging treatments",
+      "feature2": "Tissue regeneration",
+      "feature3": "Immune modulation",
+      "feature4": "Wound healing"
+    },
+    "cta": {
+      "title": "Interested in Our Technology?",
+      "description": "Learn more about how our cutting-edge exosome technology can benefit your health and wellness journey.",
+      "button": "Contact Our Team"
     }
   },
   "treatments": {
     "title": "Treatment Options",
-    "subtitle": "Comprehensive Exosome Therapy Solutions"
+    "subtitle": "Comprehensive Exosome Therapy Solutions",
+    "antiAging": {
+      "title": "Anti-Aging Therapy",
+      "description": "Restore youthful vitality and combat the signs of aging at the cellular level.",
+      "benefit1": "Improved skin elasticity",
+      "benefit2": "Reduced fine lines and wrinkles",
+      "benefit3": "Enhanced cellular regeneration",
+      "benefit4": "Increased energy levels"
+    },
+    "regenerative": {
+      "title": "Regenerative Medicine",
+      "description": "Accelerate healing and tissue repair through natural cellular communication.",
+      "benefit1": "Enhanced wound healing",
+      "benefit2": "Joint and tissue repair",
+      "benefit3": "Reduced inflammation",
+      "benefit4": "Improved recovery time"
+    },
+    "immune": {
+      "title": "Immune Modulation",
+      "description": "Balance and optimize immune system function for better overall health.",
+      "benefit1": "Strengthened immune response",
+      "benefit2": "Reduced autoimmune symptoms",
+      "benefit3": "Better stress adaptation",
+      "benefit4": "Overall wellness improvement"
+    },
+    "benefitsTitle": "Key Benefits:",
+    "learnMore": "Learn More",
+    "process": {
+      "title": "Our Treatment Process",
+      "step1": { "title": "Consultation", "description": "Comprehensive health assessment" },
+      "step2": { "title": "Personalization", "description": "Tailored treatment plan" },
+      "step3": { "title": "Treatment", "description": "Professional administration" },
+      "step4": { "title": "Follow-up", "description": "Monitoring and support" }
+    },
+    "cta": {
+      "title": "Ready to Begin Your Journey?",
+      "description": "Schedule a consultation to discover which treatment is right for you.",
+      "button": "Book Consultation"
+    }
   },
   "research": {
     "title": "Research & Development",
-    "subtitle": "Pioneering the Future of Medicine"
+    "subtitle": "Pioneering the Future of Medicine",
+    "videoSection": {
+      "title": "Advancing Science",
+      "description": "Pioneering research in exosome therapy and regenerative medicine"
+    },
+    "focus": {
+      "title": "Our Research Focus",
+      "basic": {
+        "title": "Basic Science",
+        "description": "Understanding exosome biology and mechanisms of action"
+      },
+      "clinical": {
+        "title": "Clinical Research",
+        "description": "Safety and efficacy studies in human applications"
+      },
+      "therapeutic": {
+        "title": "Therapeutic Development",
+        "description": "Creating next-generation exosome-based treatments"
+      }
+    },
+    "publications": {
+      "title": "Recent Publications",
+      "pub1": {
+        "year": "2024",
+        "title": "Advanced Exosome Characterization in Regenerative Medicine",
+        "journal": "Journal of Cellular Therapy",
+        "authors": "GoldenCell Research Team"
+      },
+      "pub2": {
+        "year": "2024",
+        "title": "Clinical Applications of Exosome-Based Therapies",
+        "journal": "International Journal of Regenerative Medicine",
+        "authors": "GoldenCell Scientific Advisory Board"
+      },
+      "pub3": {
+        "year": "2023",
+        "title": "Safety and Efficacy of Exosome Treatments",
+        "journal": "Medical Research Quarterly",
+        "authors": "GoldenCell Clinical Research Division"
+      }
+    },
+    "partnerships": {
+      "title": "Research Partnerships",
+      "partner1": { "name": "Leading University Medical Center", "focus": "Clinical trials and research" },
+      "partner2": { "name": "International Research Institute", "focus": "Exosome characterization studies" },
+      "partner3": { "name": "Biotech Innovation Lab", "focus": "Technology development" }
+    },
+    "cta": {
+      "title": "Join Our Research Community",
+      "description": "Interested in collaborating or learning more about our research initiatives?",
+      "button": "Get In Touch"
+    }
   },
   "contact": {
     "title": "Contact Us",
