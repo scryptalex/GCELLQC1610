@@ -32,4 +32,7 @@ yarn-error.log*
 # Typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large files (use external storage)
+BLOOMCELL.pdf
  
