@@ -60,7 +60,7 @@ export default function Navigation() {
             {navItems.map((item) => (
               <Link
                 key={item.key}
-                href={`/${locale}${item.href}`}
+                href={item.href === '/' ? `/${locale}` : `/${locale}${item.href}`}
                 className="text-gray-700 hover:text-[var(--gold-primary)] transition-colors duration-200 font-medium"
               >
                 {t(item.key as any)}
@@ -123,7 +123,7 @@ export default function Navigation() {
             {navItems.map((item) => (
               <Link
                 key={item.key}
-                href={`/${locale}${item.href}`}
+                href={item.href === '/' ? `/${locale}` : `/${locale}${item.href}`}
                 className="block text-gray-700 hover:text-[var(--gold-primary)] py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
