@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import Image from 'next/image';
 
@@ -10,6 +10,7 @@ export default function Navigation() {
   const t = useTranslations('nav');
   const locale = useLocale();
   const pathname = usePathname();
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
@@ -60,14 +61,16 @@ export default function Navigation() {
             {navItems.map((item) => {
               const href = item.href === '/' ? `/${locale}` : `/${locale}${item.href}`;
               return (
-                <Link
+                <button
                   key={item.key}
-                  href={href}
-                  className="text-gray-700 hover:text-[var(--gold-primary)] transition-colors duration-200 font-medium"
-                  prefetch={true}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push(href);
+                  }}
+                  className="text-gray-700 hover:text-[var(--gold-primary)] transition-colors duration-200 font-medium cursor-pointer"
                 >
                   {t(item.key as any)}
-                </Link>
+                </button>
               );
             })}
           </div>
@@ -127,15 +130,17 @@ export default function Navigation() {
             {navItems.map((item) => {
               const href = item.href === '/' ? `/${locale}` : `/${locale}${item.href}`;
               return (
-                <Link
+                <button
                   key={item.key}
-                  href={href}
-                  className="block text-gray-700 hover:text-[var(--gold-primary)] py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                  prefetch={true}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMenuOpen(false);
+                    router.push(href);
+                  }}
+                  className="block w-full text-left text-gray-700 hover:text-[var(--gold-primary)] py-2 cursor-pointer"
                 >
                   {t(item.key as any)}
-                </Link>
+                </button>
               );
             })}
             <div className="flex space-x-2 pt-4 border-t">
