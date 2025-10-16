@@ -1,0 +1,55 @@
+{
+  "common": {
+    "company": "GoldenCell",
+    "tagline": "Revolutionary Exosome Therapy for Cellular Regeneration"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "technology": "Technology",
+    "treatments": "Treatments",
+    "research": "Research",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "The Future of Regenerative Medicine",
+    "subtitle": "Unlock your body's natural healing power with advanced exosome therapy",
+    "cta": "Learn More"
+  },
+  "about": {
+    "title": "About GoldenCell",
+    "subtitle": "Leading Innovation in Exosome Therapy",
+    "description": "GoldenCell is at the forefront of regenerative medicine, specializing in exosome-based therapies that harness the power of cellular communication to promote healing and rejuvenation.",
+    "mission": "Our mission is to provide cutting-edge exosome treatments that enhance quality of life through natural cellular regeneration."
+  },
+  "technology": {
+    "title": "Our Technology",
+    "subtitle": "Advanced Exosome Science",
+    "point1": {
+      "title": "Cutting-Edge Isolation",
+      "description": "State-of-the-art technology for isolating high-quality exosomes"
+    },
+    "point2": {
+      "title": "Quality Assurance",
+      "description": "Rigorous testing and verification at every stage"
+    },
+    "point3": {
+      "title": "Personalized Treatment",
+      "description": "Tailored therapy plans designed for optimal results"
+    }
+  },
+  "treatments": {
+    "title": "Treatment Options",
+    "subtitle": "Comprehensive Exosome Therapy Solutions"
+  },
+  "research": {
+    "title": "Research & Development",
+    "subtitle": "Pioneering the Future of Medicine"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch",
+    "cta": "Send Message"
+  }
+}

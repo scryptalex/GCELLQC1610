@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #E5E4E2;
   --foreground: #171717;
+  --gold-primary: #D4AF37;
+  --gold-light: #F4D03F;
+  --gold-dark: #B8860B;
+  --platinum: #E5E4E2;
+  --platinum-light: #F5F5F5;
+  --platinum-dark: #C0C0C0;
 }
 
 @theme inline {
@@ -22,5 +28,45 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--platinum);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-dark);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Video styles */
+video {
+  object-fit: cover;
+}
+
+/* Gold gradient text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-primary), var(--gold-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
