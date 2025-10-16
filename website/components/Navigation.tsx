@@ -53,7 +53,7 @@ export default function Navigation() {
                 priority
               />
             </div>
-            <span className="text-3xl md:text-4xl font-bold gold-gradient-text group-hover:scale-105 transition-transform duration-300">
+            <span className="text-3xl md:text-4xl font-bold gold-gradient-text group-hover:scale-105 transition-transform duration-300 -ml-8">
               GoldenCell
             </span>
           </Link>
